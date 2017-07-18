@@ -1,0 +1,89 @@
+
+<ng-sidebar-container class="app" [ngClass]="{'sidebar-opened': isOpened, 'mode-push': _mode == 'push', 'mode-dock': _mode == 'dock', 'mode-over': _mode == 'over', 'mode-slide': _mode == 'slide'}">
+  <ng-sidebar
+    [(opened)]="_opened"
+    [(mode)]="_mode"
+    [position]="'left'"
+    [dockedSize]="'80px'"
+    [autoCollapseWidth]="'991'"
+    [closeOnClickOutside]="isOver()"
+    [showBackdrop]="isOver()"
+    [sidebarClass]="'sidebar-panel'" #sidebar>
+        <div class="navbar-header">
+          <a class="navbar-brand">Angular</a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#" routerLink= "/home"><span>Home</span></a></li>
+            <li><a href="#"><span>Shop</span> </a></li>
+            <li><a href="#" routerLink= "/users"><span>Manage User</span></a></li>
+            <li><a href="#" routerLink="/product"><span>Manage Product</span></a></li>
+            <li><a href="#"><span>About Us</span></a></li>
+          </ul>
+        </nav>
+      </ng-sidebar>
+ 
+      <!-- Page content -->
+      <div ng-sidebar-content class="app-inner">
+        <nav class="navbar custom-navbar">
+          <ul class="navbar-nav">
+              <li><a  class="nav-link" (click)="_toggleSidebar()" ><i class="icon-menu"></i></a></li>
+          </ul>
+          <!--<span class="navbar-heading hidden-xs-down">Dashboard</span>-->
+          <span class="mr-auto"></span>
+          <ul class="navbar-nav">
+            <li><a class="nav-link" >Logout</a></li>
+          </ul>
+        </nav>
+        
+        <div class="main-content">
+         <router-outlet></router-outlet>
+         
+          
+
+
+          <!--<h2 class="page-section-title text-center">Related Products</h2>-->
+          <!--<div class="row">
+              <div class="col-md-3 col-12">
+                  <div class="card">
+                    <div class="card-block">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text </p>
+                      <a href="#" class="btn btn-danger">Go somewhere</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-12">
+                  <div class="card">
+                    <div class="card-block">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text </p>
+                      <a href="#" class="btn btn-danger">Go somewhere</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-12">
+                  <div class="card">
+                    <div class="card-block">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text </p>
+                      <a href="#" class="btn btn-danger">Go somewhere</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-12">
+                  <div class="card">
+                    <div class="card-block">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text </p>
+                      <a href="#" class="btn btn-danger">Go somewhere</a>
+                    </div>
+                  </div>
+              </div>
+              
+          </div>-->
+
+        </div>
+      </div>
+     
+    </ng-sidebar-container>
