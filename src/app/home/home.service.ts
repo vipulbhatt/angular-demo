@@ -2,10 +2,10 @@ import {Injectable} from '@angular/core';
 import{Items} from './home';
 import{ItemArray} from './itemsArray';
 //  @Injectable()
-// export class UserService{
+// export class itemService{
 //     constructor(private _http: Http){          
 //     }
-//      getAllUser(){
+//      getAllItems(){
 //         return this._http.get('https://api.github.com/users/hadley/orgs').map((data: Response) => data.json());
 
 //      }
