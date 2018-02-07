@@ -6,7 +6,6 @@ import { SidebarModule } from 'ng-sidebar';
 import { AppComponent } from './app.component';
 import {AppRoutingModule} from './app.routing';
 import {LayoutComponent} from './layout/layout.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 //import{UsersComponent} from './users/users.component';
 
 
@@ -21,8 +20,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     HttpModule,
     SidebarModule.forRoot(),
-    AppRoutingModule,
-    NgbModule.forRoot()
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
