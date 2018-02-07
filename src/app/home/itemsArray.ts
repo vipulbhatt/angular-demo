@@ -42,5 +42,20 @@ export const ItemArray: Items[] = [
         itemName:"Bag",
         imageUrl:"./assets/images/p4.jpg",
         price:12
+    },
+
+    {
+        id:111,
+        itemName:"Bag",
+        imageUrl:"./assets/images/p4.jpg",
+        price:12
+    },
+
+
+    {
+        id:2222,
+        itemName:"Bag",
+        imageUrl:"./assets/images/p4.jpg",
+        price:12
     }
 ];
